@@ -1,0 +1,24 @@
+{
+  "name": "tree-esm-lib",
+  "description": "树方法",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "license": "ISC",
+  "main": "./dist/tree-lib.umd.cjs",
+  "module": "./dist/tree-lib.js",
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "decimal.js": "^10.4.3"
+  }
+}
