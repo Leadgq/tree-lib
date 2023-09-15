@@ -1,4 +1,4 @@
-import { calculatePercentage} from  "./lib/math"
+import { calculatePercentage ,getDistance} from  "./lib/math"
 import {
     findChildrenList,
     findChildrenListByFn,
@@ -34,5 +34,6 @@ export {
     isChildNode,
     isParentNode,
     reduceFlattenTree,
-    calculatePercentage
+    calculatePercentage,
+    getDistance
 }
