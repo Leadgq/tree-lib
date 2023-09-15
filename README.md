@@ -140,5 +140,6 @@ isParentNode(node)
  * @returns {Boolean}
  * @description 返回当前节点在树中是否是子节点
  */
-isChildNode (node)
+isChildNode (treeData,node,key)
 ```
+ 
