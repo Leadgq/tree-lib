@@ -17,8 +17,5 @@
   "module": "./dist/tree-lib.js",
   "devDependencies": {
     "vite": "^4.4.5"
-  },
-  "dependencies": {
-    "decimal.js": "^10.4.3"
   }
 }
