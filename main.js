@@ -1,4 +1,5 @@
-import { calculatePercentage} from  "./lib/math"
+import { calculatePercentage, getDistance } from "./lib/math"
+import { isAbleArray,isAbleFn,isAbleObject,isAbleString,isAbleNumber } from "./lib/base"
 import {
     findChildrenList,
     findChildrenListByFn,
@@ -16,9 +17,6 @@ import {
     reduceFlattenTree
 } from "./lib/tree";
 
-
-
-
 export {
     findChildrenList,
     findChildrenListByFn,
@@ -34,5 +32,11 @@ export {
     isChildNode,
     isParentNode,
     reduceFlattenTree,
-    calculatePercentage
+    calculatePercentage,
+    getDistance,
+    isAbleArray,
+    isAbleFn,
+    isAbleObject,
+    isAbleString,
+    isAbleNumber 
 }
