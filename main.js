@@ -5,7 +5,7 @@ import {
     symmetricDifference,
     difference,
 } from "./lib/math"
-import { getArrayDifference } from "./lib/tools"
+import { getIntersection } from "./lib/tools"
 import {
     isAbleArray,
     isAbleFn,
@@ -61,5 +61,5 @@ export {
     difference,
     reviseNumber,
     stringToNumber,
-    getArrayDifference
+    getIntersection
 }
