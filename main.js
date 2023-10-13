@@ -1,5 +1,21 @@
-import { calculatePercentage, getDistance } from "./lib/math"
-import { isAbleArray,isAbleFn,isAbleObject,isAbleString,isAbleNumber } from "./lib/base"
+import {
+    calculatePercentage,
+    getDistance,
+    intersectionArray,
+    symmetricDifference,
+    difference,
+} from "./lib/math"
+import { getIntersection } from "./lib/tools"
+import {
+    isAbleArray,
+    isAbleFn,
+    isAbleObject,
+    isAbleString,
+    isAbleNumber,
+    isHasChange,
+    reviseNumber,
+    stringToNumber
+} from "./lib/base"
 import {
     findChildrenList,
     findChildrenListByFn,
@@ -38,5 +54,12 @@ export {
     isAbleFn,
     isAbleObject,
     isAbleString,
-    isAbleNumber 
+    isAbleNumber,
+    isHasChange,
+    intersectionArray,
+    symmetricDifference,
+    difference,
+    reviseNumber,
+    stringToNumber,
+    getIntersection
 }
