@@ -1,17 +1,25 @@
-// vite.config.js
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import { terser } from "rollup-plugin-terser"
+/** @type {import('vite').UserConfig} */
 
 export default defineConfig({
   build: {
+    minify: 'terser',
     lib: {
-      // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'main.js'),
       name: 'treeLib',
-      // the proper extensions will be added
       fileName: 'tree-lib',
     },
     rollupOptions: {
+      plugins: [
+        terser({
+          format: {
+            comments: /\/\*[^\/]*\*\/|\/\/.+\n?/g
+          },
+          compress: true
+        })
+      ],
       // 确保外部化处理那些你不想打包进库的依赖
       external: ['vue'],
       output: {

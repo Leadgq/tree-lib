@@ -2,7 +2,7 @@
   "name": "tree-esm-lib",
   "description": "树方法",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "files": [
     "dist"
@@ -17,5 +17,8 @@
   "module": "./dist/tree-lib.js",
   "devDependencies": {
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
