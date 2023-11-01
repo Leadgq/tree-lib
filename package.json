@@ -2,7 +2,7 @@
   "name": "tree-esm-lib",
   "description": "树方法",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "files": [
     "dist"
