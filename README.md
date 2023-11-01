@@ -144,3 +144,13 @@ isParentNode(node)
 isChildNode (treeData,node,key)
 ```
  
+
+ ```js
+/**
+ * @param {Array | Object}  treeData
+ * @returns { Function  }  fn
+ * @description  重做树结构
+ */
+redoTreeData (treeData,fn)
+```
+ 

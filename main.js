@@ -30,7 +30,8 @@ import {
     handlerLinkage,
     isChildNode,
     isParentNode,
-    reduceFlattenTree
+    reduceFlattenTree,
+    redoTreeData
 } from "./lib/tree";
 
 export {
@@ -62,5 +63,6 @@ export {
     reviseNumber,
     stringToNumber,
     getIntersection,
-    getSymmetricDifference
+    getSymmetricDifference,
+    redoTreeData
 }
