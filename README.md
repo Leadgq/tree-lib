@@ -147,10 +147,9 @@ isChildNode (treeData,node,key)
 
  ```js
 /**
- * @param {Array | Object}  treeData
- * @returns { Function  }  fn
+ * @param { Array | Object }  tree
+ * @param  { Function  } handlerTreeFn
  * @description  重做树结构
  */
 redoTreeData (treeData,fn)
 ```
- 
