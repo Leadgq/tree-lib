@@ -31,7 +31,8 @@ import {
     isChildNode,
     isParentNode,
     reduceFlattenTree,
-    redoTreeData
+    redoTreeData,
+    isLeafNode
 } from "./lib/tree";
 
 export {
@@ -64,5 +65,6 @@ export {
     stringToNumber,
     getIntersection,
     getSymmetricDifference,
-    redoTreeData
+    redoTreeData,
+    isLeafNode
 }

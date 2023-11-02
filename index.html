@@ -1,13 +1,66 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- <script type="module" src="/main.js"></script> -->
+  <script type="module">
+    import { redoTreeData, isAbleArray, isChildNode, flattenTree, findPath, findTreeByTreeData, findChildrenList, findChildrenListByFn } from "/main.js"
+    import { isLeafNode } from "./lib/tree.js"
+    const treeData = [
+      {
+        id: "1",
+        name: '部门1',
+        children: [
+          {
+            id: "1-1",
+            name: '部门1-1',
+            children: [
+              {
+                id: "1-1-1",
+                name: '部门1-1-1',
+                children: [
+                  {
+                    id: "1-1-1-1",
+                    name: '部门1-1-1-1',
+                    children: [
+                      {
+                        id: "1-1-1-1-1",
+                        name: '部门1-1-1-1-1',
+                        children: []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: "1-2",
+            name: '部门1-2',
+            children: [
+              {
+                id: "1-2-1",
+                name: '部门1-2-1',
+                children: undefined,
+              }
+            ]
+          },
+        ]
+      }
+    ]
+
+    const node = findTreeByTreeData(treeData, "id", "1-1-1-1-1");
+
+    console.log(findChildrenListByFn(treeData, (item) => item.id === '1-1-1-1-1'));
+  </script>
+</body>
+
 </html>
