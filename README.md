@@ -147,10 +147,20 @@ isChildNode (treeData,node,key)
 
  ```js
 /**
- * @param {Array | Object}  treeData
- * @returns { Function  }  fn
+ * @param { Array | Object }  tree
+ * @param  { Function  } handlerTreeFn
  * @description  重做树结构
  */
 redoTreeData (treeData,fn)
 ```
- 
+
+
+ ```js
+/**
+ * @param { Array | Object }  treeData
+ * @param  { Object  } node
+ * @param  { String  } key
+ * @description  返回当前节点是否是叶子节点,外界如果提供isLeaf字段、则直接返回isLeaf字段
+ */
+isLeafNode (treeData,node,key)
+```
