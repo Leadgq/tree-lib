@@ -32,7 +32,8 @@ import {
     isParentNode,
     reduceFlattenTree,
     redoTreeData,
-    isLeafNode
+    isLeafNode,
+    findCurrentNodeBrotherNode
 } from "./lib/tree";
 
 export {
@@ -66,5 +67,6 @@ export {
     getIntersection,
     getSymmetricDifference,
     redoTreeData,
-    isLeafNode
+    isLeafNode,
+    findCurrentNodeBrotherNode
 }
