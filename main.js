@@ -1,12 +1,19 @@
-import {
+export {
     calculatePercentage,
     getDistance,
     intersectionArray,
     symmetricDifference,
     difference,
 } from "./lib/math"
-import { getIntersection, getSymmetricDifference } from "./lib/tools"
-import {
+
+export {
+    getIntersection,
+    getSymmetricDifference,
+    genderMapAndSetMapKey,
+    memoize
+} from "./lib/tools"
+
+export {
     isAbleArray,
     isAbleFn,
     isAbleObject,
@@ -14,9 +21,20 @@ import {
     isAbleNumber,
     isHasChange,
     reviseNumber,
-    stringToNumber
+    stringToNumber,
+    arrayLength,
+    arrToStr,
+    strToArr,
+    isAbleSet,
+    isAbleMap,
+    getMapSize,
+    getSetSize,
+    getObjetValues,
+    getObjetKeys,
+    getObjectEntries
 } from "./lib/base"
-import {
+
+export {
     findChildrenList,
     findChildrenListByFn,
     findParent,
@@ -35,38 +53,3 @@ import {
     isLeafNode,
     findCurrentNodeBrotherNode
 } from "./lib/tree";
-
-export {
-    findChildrenList,
-    findChildrenListByFn,
-    findParent,
-    findPath,
-    findTreeByFlatArray,
-    findTreeByFn,
-    findTreeByTreeData,
-    flattenTree,
-    flattenTreeByDepth,
-    flattenTreeByPostOrder,
-    handlerLinkage,
-    isChildNode,
-    isParentNode,
-    reduceFlattenTree,
-    calculatePercentage,
-    getDistance,
-    isAbleArray,
-    isAbleFn,
-    isAbleObject,
-    isAbleString,
-    isAbleNumber,
-    isHasChange,
-    intersectionArray,
-    symmetricDifference,
-    difference,
-    reviseNumber,
-    stringToNumber,
-    getIntersection,
-    getSymmetricDifference,
-    redoTreeData,
-    isLeafNode,
-    findCurrentNodeBrotherNode
-}
