@@ -8,7 +8,9 @@ export {
 
 export {
     getIntersection,
-    getSymmetricDifference
+    getSymmetricDifference,
+    genderMapAndSetMapKey,
+    memoize
 } from "./lib/tools"
 
 export {
@@ -23,6 +25,13 @@ export {
     arrayLength,
     arrToStr,
     strToArr,
+    isAbleSet,
+    isAbleMap,
+    getMapSize,
+    getSetSize,
+    getObjetValues,
+    getObjetKeys,
+    getObjectEntries
 } from "./lib/base"
 
 export {
