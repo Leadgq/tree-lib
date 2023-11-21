@@ -5,6 +5,7 @@ export {
     symmetricDifference,
     difference,
 } from "./lib/math"
+
 export {
     getIntersection,
     getSymmetricDifference
@@ -18,7 +19,10 @@ export {
     isAbleNumber,
     isHasChange,
     reviseNumber,
-    stringToNumber
+    stringToNumber,
+    arrayLength,
+    arrToStr,
+    strToArr,
 } from "./lib/base"
 
 export {
