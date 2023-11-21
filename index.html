@@ -12,8 +12,10 @@
   <div id="app"></div>
   <!-- <script type="module" src="/main.js"></script> -->
   <script type="module">
-    import { redoTreeData, isAbleArray, isChildNode, flattenTree, findPath, findTreeByTreeData, findChildrenList, findChildrenListByFn, findCurrentNodeBrotherNode } from "/main.js"
-    import { isLeafNode } from "./lib/tree.js"
+    import {
+      strToArr
+    } from "/main.js"
+
     const treeData = [
       {
         id: "1",
@@ -68,10 +70,7 @@
       }
     ]
 
-    const node = findTreeByTreeData(treeData, "id", "1-1-1-1");
-
-    // console.log(findChildrenListByFn(treeData, (item) => item.id === '1-1-1-1-1'));
-    console.log(findCurrentNodeBrotherNode(treeData, node, 'id'));
+    console.log(strToArr('a-b-c', '-'));
   </script>
 </body>
 
