@@ -10,7 +10,9 @@ export {
     getIntersection,
     getSymmetricDifference,
     genderMapAndSetMapKey,
-    memoize
+    memoize,
+    parseLocationUrlParams,
+    toThousands
 } from "./lib/tools"
 
 export {

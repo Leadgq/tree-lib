@@ -17,7 +17,9 @@
       getObjectEntries,
       isAbleMap,
       getMapSize,
-      genderMapAndSetMapKey
+      genderMapAndSetMapKey,
+      parseLocationUrlParams,
+      toThousands
     } from "/main.js"
 
     const treeData = [
@@ -73,23 +75,25 @@
         ]
       }
     ]
-    console.log(findPath(treeData, "1-1-1-1-1", 'id', false, true));
-    let list = [
-      {
-        name: '部门1',
-        age: 33,
-        id: 3
-      },
-      {
-        name: '部门2',
-        age: 33,
-        id: 4
-      }
-    ]
-    console.log(genderMapAndSetMapKey(list, 'id'));
-    setTimeout(() => {
-      console.log(genderMapAndSetMapKey(list, 'id'));
-    }, 1000)
+    // console.log(findPath(treeData, "1-1-1-1-1", 'id', false, true));
+    // let list = [
+    //   {
+    //     name: '部门1',
+    //     age: 33,
+    //     id: 3
+    //   },
+    //   {
+    //     name: '部门2',
+    //     age: 33,
+    //     id: 4
+    //   }
+    // ]
+    // console.log(genderMapAndSetMapKey(list, 'id'));
+    // setTimeout(() => {
+    //   console.log(genderMapAndSetMapKey(list, 'id'));
+    // }, 1000)
+    console.log(parseLocationUrlParams());
+    console.log(toThousands(0));
   </script>
 </body>
 
