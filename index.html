@@ -19,7 +19,8 @@
       getMapSize,
       genderMapAndSetMapKey,
       parseLocationUrlParams,
-      toThousands
+      toThousands,
+      findChildrenListByFn
     } from "/main.js"
 
     const treeData = [
@@ -94,6 +95,11 @@
     // }, 1000)
     console.log(parseLocationUrlParams());
     console.log(toThousands(0));
+
+    const list = ['1-2', '1-1']
+    console.log(findChildrenListByFn(treeData, (item) => {
+      return list.includes(item.id)
+    }));
   </script>
 </body>
 
