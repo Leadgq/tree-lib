@@ -28,6 +28,9 @@ export default defineConfig({
           vue: 'Vue',
         },
       },
-    },
+    }
   },
+  server: {
+    open: true,
+  }
 })
