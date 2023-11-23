@@ -12,7 +12,8 @@ export {
     genderMapAndSetMapKey,
     memoize,
     parseLocationUrlParams,
-    toThousands
+    toThousands,
+    hidePhone
 } from "./lib/tools"
 
 export {

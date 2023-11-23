@@ -20,7 +20,8 @@
       genderMapAndSetMapKey,
       parseLocationUrlParams,
       toThousands,
-      findChildrenListByFn
+      findChildrenListByFn,
+      hidePhone
     } from "/main.js"
 
     const treeData = [
@@ -100,6 +101,8 @@
     console.log(findChildrenListByFn(treeData, (item) => {
       return list.includes(item.id)
     }));
+
+    // console.log(hidePhone(12345678901));
   </script>
 </body>
 
