@@ -13,7 +13,8 @@ export {
     memoize,
     parseLocationUrlParams,
     toThousands,
-    hidePhone
+    hidePhone,
+    sleep
 } from "./lib/tools"
 
 export {

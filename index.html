@@ -21,7 +21,8 @@
       parseLocationUrlParams,
       toThousands,
       findChildrenListByFn,
-      hidePhone
+      hidePhone,
+      sleep
     } from "/main.js"
 
     const treeData = [
@@ -103,6 +104,13 @@
     }));
 
     // console.log(hidePhone(12345678901));
+    async function sleepTest() {
+      const { promises, cancel } = sleep(3000)
+      // cancel();
+      const message = await promises;
+      console.log(message);
+    }
+    sleepTest();
   </script>
 </body>
 
