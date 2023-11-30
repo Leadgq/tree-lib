@@ -1,3 +1,6 @@
+## 可访问
+(https://leadgq.github.io/tree-lib-doc/) 获取最新使用案例
+
 ```js
 /** 
  * @param { Array | Object } tree  树数组或者树对象

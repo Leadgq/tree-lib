@@ -17,7 +17,12 @@
       getObjectEntries,
       isAbleMap,
       getMapSize,
-      genderMapAndSetMapKey
+      genderMapAndSetMapKey,
+      parseLocationUrlParams,
+      toThousands,
+      findChildrenListByFn,
+      hidePhone,
+      sleep
     } from "/main.js"
 
     const treeData = [
@@ -73,23 +78,39 @@
         ]
       }
     ]
-    console.log(findPath(treeData, "1-1-1-1-1", 'id', false, true));
-    let list = [
-      {
-        name: '部门1',
-        age: 33,
-        id: 3
-      },
-      {
-        name: '部门2',
-        age: 33,
-        id: 4
-      }
-    ]
-    console.log(genderMapAndSetMapKey(list, 'id'));
-    setTimeout(() => {
-      console.log(genderMapAndSetMapKey(list, 'id'));
-    }, 1000)
+    // console.log(findPath(treeData, "1-1-1-1-1", 'id', false, true));
+    // let list = [
+    //   {
+    //     name: '部门1',
+    //     age: 33,
+    //     id: 3
+    //   },
+    //   {
+    //     name: '部门2',
+    //     age: 33,
+    //     id: 4
+    //   }
+    // ]
+    // console.log(genderMapAndSetMapKey(list, 'id'));
+    // setTimeout(() => {
+    //   console.log(genderMapAndSetMapKey(list, 'id'));
+    // }, 1000)
+    console.log(parseLocationUrlParams());
+    console.log(toThousands('12345678903123123'));
+
+    const list = ['1-2', '1-1']
+    console.log(findChildrenListByFn(treeData, (item) => {
+      return list.includes(item.id)
+    }));
+
+    // console.log(hidePhone(12345678901));
+    async function sleepTest() {
+      const { promises, cancel } = sleep(3000)
+      // cancel();
+      const message = await promises;
+      console.log(message);
+    }
+    sleepTest();
   </script>
 </body>
 
