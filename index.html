@@ -22,7 +22,10 @@
       toThousands,
       findChildrenListByFn,
       hidePhone,
-      sleep
+      sleep,
+      findTreeByTreeData,
+      findCurrentNodeBrotherNode,
+      isChildNode
     } from "/main.js"
 
     const treeData = [
@@ -78,7 +81,11 @@
         ]
       }
     ]
-    // console.log(findPath(treeData, "1-1-1-1-1", 'id', false, true));
+    const node = findTreeByTreeData(treeData, 'id', '1');
+
+    console.log('节点', findPath(treeData, node, 'id', true, true));
+    console.log('兄弟', findCurrentNodeBrotherNode(treeData, node, 'id'));
+    console.log('子节点', isChildNode(treeData, node, 'id'));
     // let list = [
     //   {
     //     name: '部门1',
@@ -95,22 +102,22 @@
     // setTimeout(() => {
     //   console.log(genderMapAndSetMapKey(list, 'id'));
     // }, 1000)
-    console.log(parseLocationUrlParams());
-    console.log(toThousands('12345678903123123'));
+    // console.log(parseLocationUrlParams());
+    // console.log(toThousands('12345678903123123'));
 
-    const list = ['1-2', '1-1']
-    console.log(findChildrenListByFn(treeData, (item) => {
-      return list.includes(item.id)
-    }));
+    // const list = ['1-2', '1-1']
+    // console.log(findChildrenListByFn(treeData, (item) => {
+    //   return list.includes(item.id)
+    // }));
 
-    // console.log(hidePhone(12345678901));
-    async function sleepTest() {
-      const { promises, cancel } = sleep(3000)
-      // cancel();
-      const message = await promises;
-      console.log(message);
-    }
-    sleepTest();
+    // // console.log(hidePhone(12345678901));
+    // async function sleepTest() {
+    //   const { promises, cancel } = sleep(3000)
+    //   // cancel();
+    //   const message = await promises;
+    //   console.log(message);
+    // }
+    // sleepTest();
   </script>
 </body>
 
