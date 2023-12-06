@@ -25,7 +25,8 @@
       sleep,
       findTreeByTreeData,
       findCurrentNodeBrotherNode,
-      isChildNode
+      isChildNode,
+      after
     } from "/main.js"
 
     const treeData = [
@@ -83,9 +84,9 @@
     ]
     const node = findTreeByTreeData(treeData, 'id', '1');
 
-    console.log('节点', findPath(treeData, node, 'id', true, true));
-    console.log('兄弟', findCurrentNodeBrotherNode(treeData, node, 'id'));
-    console.log('子节点', isChildNode(treeData, node, 'id'));
+    // console.log('节点', findPath(treeData, node, 'id', true, true));
+    // console.log('兄弟', findCurrentNodeBrotherNode(treeData, node, 'id'));
+    // console.log('子节点', isChildNode(treeData, node, 'id'));
     // let list = [
     //   {
     //     name: '部门1',
@@ -118,6 +119,17 @@
     //   console.log(message);
     // }
     // sleepTest();
+
+    let saves = ['profile', 'settings', 'profile', 'settings'];
+
+    let done = after(() => {
+      console.log('done');
+    });
+
+    saves.forEach(() => {
+      console.log('循环');
+      done();
+    })
   </script>
 </body>
 
