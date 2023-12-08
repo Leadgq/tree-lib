@@ -29,7 +29,9 @@
       after,
       nowTimeStamp,
       futureTimestamp,
-      differenceTimestamp
+      differenceTimestamp,
+      isParentNode,
+      objIsContainsKey
     } from "/main.js"
 
     const treeData = [
@@ -83,13 +85,19 @@
             ]
           },
         ]
+      },
+      {
+        id: '2',
+        name: '部门2',
+        children: []
       }
     ]
-    const node = findTreeByTreeData(treeData, 'id', '1');
+    const node = findTreeByTreeData(treeData, 'id', '1-2-1');
 
-    // console.log('节点', findPath(treeData, node, 'id', true, true));
-    // console.log('兄弟', findCurrentNodeBrotherNode(treeData, node, 'id'));
-    // console.log('子节点', isChildNode(treeData, node, 'id'));
+    // console.log('节点', findPath(treeData, '1-1-1-1', 'id', true, true));
+    // console.log('兄弟', findCurrentNodeBrotherNode(treeData, '1-1-1-1', 'id'));
+    console.log('子节点', isChildNode(treeData, '1-1-1-1-2', 'id'));
+    // console.log('父节点', isParentNode(treeData, '2', 'id'));
     // let list = [
     //   {
     //     name: '部门1',
@@ -138,6 +146,10 @@
     // const futureTimestampResult = futureTimestamp(1, 'minute');
     // console.log(futureTimestampResult);
     console.log(differenceTimestamp(10, 'minute'));
+    const object = {
+      name: '测手机'
+    }
+    console.log(objIsContainsKey(object, 'name'));
   </script>
 </body>
 

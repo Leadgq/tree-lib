@@ -39,7 +39,8 @@ export {
     getSetSize,
     getObjetValues,
     getObjetKeys,
-    getObjectEntries
+    getObjectEntries,
+    objIsContainsKey
 } from "./lib/base"
 
 export {
