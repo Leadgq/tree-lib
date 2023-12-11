@@ -31,7 +31,8 @@
       futureTimestamp,
       differenceTimestamp,
       isParentNode,
-      objIsContainsKey
+      objIsContainsKey,
+      initBroadcastChannel
     } from "/main.js"
 
     const treeData = [
@@ -145,11 +146,21 @@
     // console.log(futureTimestamp(1, 'day'));
     // const futureTimestampResult = futureTimestamp(1, 'minute');
     // console.log(futureTimestampResult);
-    console.log(differenceTimestamp(10, 'minute'));
-    const object = {
-      name: '测手机'
-    }
-    console.log(objIsContainsKey(object, 'name'));
+    // console.log(differenceTimestamp(10, 'minute'));
+    // const object = {
+    //   name: '测手机'
+    // }
+    // console.log(objIsContainsKey(object, 'name'));
+
+    const bor = initBroadcastChannel('message')
+    bor.sendMessage('change', '我是发送的消息')
+
+
+    setTimeout(() => {
+      bor.receiveMessage((data) => {
+        console.log(data);
+      })
+    }, 1000)
   </script>
 </body>
 

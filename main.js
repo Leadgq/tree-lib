@@ -18,7 +18,8 @@ export {
     after,
     nowTimeStamp,
     futureTimestamp,
-    differenceTimestamp
+    differenceTimestamp,
+    initBroadcastChannel
 } from "./lib/tools"
 
 export {
