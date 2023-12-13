@@ -19,7 +19,9 @@ export {
     nowTimeStamp,
     futureTimestamp,
     differenceTimestamp,
-    initBroadcastChannel
+    initBroadcastChannel,
+    uniqueArray,
+    fuzzySearch
 } from "./lib/tools"
 
 export {
@@ -41,7 +43,8 @@ export {
     getObjetValues,
     getObjetKeys,
     getObjectEntries,
-    objIsContainsKey
+    objIsContainsKey,
+    typeofData
 } from "./lib/base"
 
 export {
