@@ -16,9 +16,6 @@ export {
     hidePhone,
     sleep,
     after,
-    nowTimeStamp,
-    futureTimestamp,
-    differenceTimestamp,
     initBroadcastChannel,
     uniqueArray,
     fuzzySearch
