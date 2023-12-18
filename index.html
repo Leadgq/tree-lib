@@ -31,7 +31,8 @@
       objIsContainsKey,
       initBroadcastChannel,
       uniqueArray,
-      fuzzySearch
+      fuzzySearch,
+      isLeafNode
     } from "/main.js"
 
     const treeData = [
@@ -93,6 +94,8 @@
       }
     ]
     const node = findTreeByTreeData(treeData, 'id', '1-2-1');
+
+    console.log(isLeafNode(treeData, node, 'id'));
 
     // console.log('节点', findPath(treeData, '1-2-1', 'id', true, true));
     // console.log('兄弟', findCurrentNodeBrotherNode(treeData, '1-1-1-1', 'id'));
@@ -194,7 +197,7 @@
       }
     ]
     console.log(uniqueArray(data, 'id'));
-    console.log(fuzzySearch(data, '34555', 'age'));
+    console.log(fuzzySearch(data, '3', 'age'));
   </script>
 </body>
 
