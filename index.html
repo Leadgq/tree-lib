@@ -32,7 +32,8 @@
       initBroadcastChannel,
       uniqueArray,
       fuzzySearch,
-      isLeafNode
+      isLeafNode,
+      treeFuzzySearch
     } from "/main.js"
 
     const treeData = [
@@ -96,6 +97,79 @@
     const node = findTreeByTreeData(treeData, 'id', '1-2-1');
 
     console.log(isLeafNode(treeData, node, 'id'));
+
+
+
+    const cityData = [
+      {
+        id: 1,
+        label: '北京',
+        children: [
+          {
+            id: 2,
+            label: '北京市',
+            children: [
+              {
+                id: 3,
+                label: '东城区',
+                children: [
+                  {
+                    id: 4,
+                    label: '东城街道'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 5,
+        label: '大连市',
+        children: [
+          {
+            id: 6,
+            label: '甘井子区',
+            children: [
+              {
+                id: 7,
+                label: '甘井子街道',
+                children: [
+                  {
+                    id: 8,
+                    label: '甘井子小城区'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 5,
+        label: '大连市',
+        children: [
+          {
+            id: 6,
+            label: '甘井子区',
+            children: [
+              {
+                id: 7,
+                label: '甘井子小城区',
+                children: [
+                  {
+                    id: 8,
+                    label: '甘井子街道'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+
+    // console.log(treeFuzzySearch(cityData, '街', 'label'));
 
     // console.log('节点', findPath(treeData, '1-2-1', 'id', true, true));
     // console.log('兄弟', findCurrentNodeBrotherNode(treeData, '1-1-1-1', 'id'));

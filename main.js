@@ -61,5 +61,6 @@ export {
     reduceFlattenTree,
     redoTreeData,
     isLeafNode,
-    findCurrentNodeBrotherNode
+    findCurrentNodeBrotherNode,
+    treeFuzzySearch
 } from "./lib/tree";
