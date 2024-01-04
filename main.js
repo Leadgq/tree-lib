@@ -18,7 +18,8 @@ export {
     after,
     initBroadcastChannel,
     uniqueArray,
-    fuzzySearch
+    fuzzySearch,
+    Clipboard
 } from "./lib/tools"
 
 export {
