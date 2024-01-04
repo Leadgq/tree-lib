@@ -10,7 +10,8 @@
 
 <body>
   <div id="app">
-    <input type="text" id="input">
+    <!-- <input type="text" id="input"> -->
+    <div class="test">测试机哦sss</div>
     <button id="copy">复制</button>
   </div>
   <!-- <script type="module" src="/main.js"></script> -->
@@ -280,8 +281,8 @@
     // console.log(fuzzySearch(data, '3', 'age'));
 
     async function test() {
-      const input = document.getElementById('input');
-      const value = input.value;
+      const test = document.querySelector('.test');
+      const value = test.innerText;
       const ClipboardInstance = new Clipboard();
       const res = await ClipboardInstance.copyTextByClipboard(value);
       const text = await ClipboardInstance.readTextByClipboard();
