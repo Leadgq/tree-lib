@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "pub": "vite build && npm publish"
   },
   "license": "ISC",
   "main": "./dist/tree-lib.umd.cjs",
