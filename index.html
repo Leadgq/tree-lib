@@ -9,7 +9,10 @@
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <input type="text" id="input">
+    <button id="copy">复制</button>
+  </div>
   <!-- <script type="module" src="/main.js"></script> -->
   <script type="module">
     import {
@@ -33,145 +36,146 @@
       uniqueArray,
       fuzzySearch,
       isLeafNode,
-      treeFuzzySearch
+      treeFuzzySearch,
+      Clipboard
     } from "/main.js"
 
-    const treeData = [
-      {
-        id: "1",
-        name: '部门1',
-        children: [
-          {
-            id: "1-1",
-            name: '部门1-1',
-            children: [
-              {
-                id: "1-1-1",
-                name: '部门1-1-1',
-                children: [
-                  {
-                    id: "1-1-1-1",
-                    name: '部门1-1-1-1',
-                    children: [
-                      {
-                        id: "1-1-1-1-1",
-                        name: '部门1-1-1-1-1',
-                        children: []
-                      }
-                    ]
-                  },
-                  {
-                    id: "1-1-1-2",
-                    name: '部门1-1-1-2',
-                    children: [
-                      {
-                        id: "1-1-1-1-2",
-                        name: '部门1-1-1-1-2',
-                        children: []
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            id: "1-2",
-            name: '部门1-2',
-            children: [
-              {
-                id: "1-2-1",
-                name: '部门1-2-1',
-                children: undefined,
-              }
-            ]
-          },
-        ]
-      },
-      {
-        id: '2',
-        name: '部门2',
-        children: []
-      }
-    ]
-    const node = findTreeByTreeData(treeData, 'id', '1-2-1');
+    // const treeData = [
+    //   {
+    //     id: "1",
+    //     name: '部门1',
+    //     children: [
+    //       {
+    //         id: "1-1",
+    //         name: '部门1-1',
+    //         children: [
+    //           {
+    //             id: "1-1-1",
+    //             name: '部门1-1-1',
+    //             children: [
+    //               {
+    //                 id: "1-1-1-1",
+    //                 name: '部门1-1-1-1',
+    //                 children: [
+    //                   {
+    //                     id: "1-1-1-1-1",
+    //                     name: '部门1-1-1-1-1',
+    //                     children: []
+    //                   }
+    //                 ]
+    //               },
+    //               {
+    //                 id: "1-1-1-2",
+    //                 name: '部门1-1-1-2',
+    //                 children: [
+    //                   {
+    //                     id: "1-1-1-1-2",
+    //                     name: '部门1-1-1-1-2',
+    //                     children: []
+    //                   }
+    //                 ]
+    //               }
+    //             ]
+    //           }
+    //         ]
+    //       },
+    //       {
+    //         id: "1-2",
+    //         name: '部门1-2',
+    //         children: [
+    //           {
+    //             id: "1-2-1",
+    //             name: '部门1-2-1',
+    //             children: undefined,
+    //           }
+    //         ]
+    //       },
+    //     ]
+    //   },
+    //   {
+    //     id: '2',
+    //     name: '部门2',
+    //     children: []
+    //   }
+    // ]
+    // const node = findTreeByTreeData(treeData, 'id', '1-2-1');
 
-    console.log(isLeafNode(treeData, node, 'id'));
+    // console.log(isLeafNode(treeData, node, 'id'));
 
-    console.log(findCurrentNodeBrotherNode(treeData, '1-1-1-1', 'id'));
+    // console.log(findCurrentNodeBrotherNode(treeData, '1-1-1-1', 'id'));
 
 
 
-    const cityData = [
-      {
-        id: 1,
-        label: '北京',
-        children: [
-          {
-            id: 2,
-            label: '北京市',
-            children: [
-              {
-                id: 3,
-                label: '东城区',
-                children: [
-                  {
-                    id: 4,
-                    label: '东城街道'
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 5,
-        label: '大连市',
-        children: [
-          {
-            id: 6,
-            label: '甘井子区',
-            children: [
-              {
-                id: 7,
-                label: '甘井子街道',
-                children: [
-                  {
-                    id: 8,
-                    label: '甘井子小城区'
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 5,
-        label: '大连市',
-        children: [
-          {
-            id: 6,
-            label: '甘井子区',
-            children: [
-              {
-                id: 7,
-                label: '甘井子小城区',
-                children: [
-                  {
-                    id: 8,
-                    label: '甘井子街道'
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
+    // const cityData = [
+    //   {
+    //     id: 1,
+    //     label: '北京',
+    //     children: [
+    //       {
+    //         id: 2,
+    //         label: '北京市',
+    //         children: [
+    //           {
+    //             id: 3,
+    //             label: '东城区',
+    //             children: [
+    //               {
+    //                 id: 4,
+    //                 label: '东城街道'
+    //               }
+    //             ]
+    //           }
+    //         ]
+    //       }
+    //     ]
+    //   },
+    //   {
+    //     id: 5,
+    //     label: '大连市',
+    //     children: [
+    //       {
+    //         id: 6,
+    //         label: '甘井子区',
+    //         children: [
+    //           {
+    //             id: 7,
+    //             label: '甘井子街道',
+    //             children: [
+    //               {
+    //                 id: 8,
+    //                 label: '甘井子小城区'
+    //               }
+    //             ]
+    //           }
+    //         ]
+    //       }
+    //     ]
+    //   },
+    //   {
+    //     id: 5,
+    //     label: '大连市',
+    //     children: [
+    //       {
+    //         id: 6,
+    //         label: '甘井子区',
+    //         children: [
+    //           {
+    //             id: 7,
+    //             label: '甘井子小城区',
+    //             children: [
+    //               {
+    //                 id: 8,
+    //                 label: '甘井子街道'
+    //               }
+    //             ]
+    //           }
+    //         ]
+    //       }
+    //     ]
+    //   }
+    // ]
 
-    console.log(treeFuzzySearch(cityData, '街', 'label'));
+    // console.log(treeFuzzySearch(cityData, '街', 'label'));
 
     // console.log('节点', findPath(treeData, '1-2-1', 'id', true, true));
     // console.log('兄弟', findCurrentNodeBrotherNode(treeData, '1-1-1-1', 'id'));
@@ -240,40 +244,51 @@
     //   })
     // }, 1000)
 
-    const data = [
-      {
-        name: 'gq',
-        age: 22,
-        id: 2
-      },
-      {
-        name: '李四',
-        age: 22,
-        id: 1
-      },
-      {
-        name: '老宋',
-        age: 3333333333,
-        id: 221
-      },
-      {
-        name: '李四',
-        age: 22,
-        id: 1
-      },
-      {
-        name: '王五',
-        age: 365,
-        id: 6
-      },
-      {
-        name: '王昭君',
-        age: 34,
-        id: 7
-      }
-    ]
+    // const data = [
+    //   {
+    //     name: 'gq',
+    //     age: 22,
+    //     id: 2
+    //   },
+    //   {
+    //     name: '李四',
+    //     age: 22,
+    //     id: 1
+    //   },
+    //   {
+    //     name: '老宋',
+    //     age: 3333333333,
+    //     id: 221
+    //   },
+    //   {
+    //     name: '李四',
+    //     age: 22,
+    //     id: 1
+    //   },
+    //   {
+    //     name: '王五',
+    //     age: 365,
+    //     id: 6
+    //   },
+    //   {
+    //     name: '王昭君',
+    //     age: 34,
+    //     id: 7
+    //   }
+    // ]
     // console.log(uniqueArray(data, 'id'));
     // console.log(fuzzySearch(data, '3', 'age'));
+
+    async function test() {
+      const input = document.getElementById('input');
+      const value = input.value;
+      const ClipboardInstance = new Clipboard();
+      const res = await ClipboardInstance.copyTextByClipboard(value);
+      const text = await ClipboardInstance.readTextByClipboard();
+      console.log(text);
+    }
+    const copyButton = document.getElementById('copy');
+    copyButton.addEventListener('click', test)
   </script>
 </body>
 
