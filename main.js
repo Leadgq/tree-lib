@@ -19,7 +19,8 @@ export {
     initBroadcastChannel,
     uniqueArray,
     fuzzySearch,
-    Clipboard
+    Clipboard,
+    createOverload
 } from "./lib/tools"
 
 export {
