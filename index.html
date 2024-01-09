@@ -104,11 +104,11 @@
       ]
     }
 
-    const node = findTreeByTreeData(treeData, 'id', '1-2-1');
+    // const node = findTreeByTreeData(treeData, 'id', '1-2-1');
 
-    console.log(isLeafNode(treeData, node, 'id'));
+    // console.log(isLeafNode(treeData, node, 'id'));
 
-    console.log(findCurrentNodeBrotherNode(treeData, '1-1-1-1', 'id'));
+    // console.log(findCurrentNodeBrotherNode(treeData, '1-1-1-1', 'id'));
 
 
 
@@ -296,18 +296,18 @@
     // const copyButton = document.getElementById('copy');
     // copyButton.addEventListener('click', test)
 
-    const testFn = createOverload();
-    const strFn = (...args) => {
-      console.log(args);
-    }
-    const strFn2 = (page1, page2, page3) => {
+    // const testFn = createOverload();
+    // const strFn = (...args) => {
+    //   console.log(args);
+    // }
+    // const strFn2 = (page1, page2, page3) => {
 
-      console.log(page1, page2, page3);
-    }
-    testFn.addImpl('string', strFn)
-    testFn.addImpl('string', 'string', strFn)
-    testFn.addImpl('string', 'string', 'string', strFn2)
-    testFn('1', '2', '3')
+    //   console.log(page1, page2, page3);
+    // }
+    // testFn.addImpl('string', strFn)
+    // testFn.addImpl('string', 'string', strFn)
+    // testFn.addImpl('string', 'string', 'string', strFn2)
+    // testFn('1', '2', '3')
   </script>
 </body>
 
