@@ -30,6 +30,7 @@
       findTreeByTreeData,
       findCurrentNodeBrotherNode,
       isChildNode,
+      isRootNode,
       after,
       isParentNode,
       objIsContainsKey,
@@ -39,76 +40,76 @@
       isLeafNode,
       treeFuzzySearch,
       Clipboard,
-      createOverload
+      createOverload,
     } from "/main.js"
 
-    // const treeData = [
+    const treeData = [
+      {
+        id: "1",
+        name: '部门1',
+        children: [
+          {
+            id: "1-1",
+            name: '部门1-1',
+            children: [
+              {
+                id: "1-1-1",
+                name: '部门1-1-1',
+                children: [
+                  {
+                    id: "1-1-1-1",
+                    name: '部门1-1-1-1',
+                    children: [
+                      {
+                        id: "1-1-1-1-1",
+                        name: '部门1-1-1-1-1',
+                        children: []
+                      }
+                    ]
+                  },
+                  {
+                    id: "1-1-1-2",
+                    name: '部门1-1-1-2',
+                    children: [
+                      {
+                        id: "1-1-1-1-2",
+                        name: '部门1-1-1-1-2',
+                        children: []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            id: "1-2",
+            name: '部门1-2',
+            children: [
+              {
+                id: "1-2-1",
+                name: '部门1-2-1',
+                children: undefined,
+              }
+            ]
+          },
+        ]
+      },
+      {
+        id: '2',
+        name: '部门2',
+        children: []
+      }
+    ]
+    // const treeData =
 
-    //   {
-    //     id: '2',
-    //     name: '部门2',
-    //     children: []
-    //   }
-    // ]
-
-
-    const treeData = {
-      id: "1",
-      name: '部门1',
-      children: [
-        {
-          id: "1-1",
-          name: '部门1-1',
-          children: [
-            {
-              id: "1-1-1",
-              name: '部门1-1-1',
-              children: [
-                {
-                  id: "1-1-1-1",
-                  name: '部门1-1-1-1',
-                  children: [
-                    {
-                      id: "1-1-1-1-1",
-                      name: '部门1-1-1-1-1',
-                      children: []
-                    }
-                  ]
-                },
-                {
-                  id: "1-1-1-2",
-                  name: '部门1-1-1-2',
-                  children: [
-                    {
-                      id: "1-1-1-1-2",
-                      name: '部门1-1-1-1-2',
-                      children: []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: "1-2",
-          name: '部门1-2',
-          children: [
-            {
-              id: "1-2-1",
-              name: '部门1-2-1',
-              children: undefined,
-            }
-          ]
-        },
-      ]
-    }
-
-    // const node = findTreeByTreeData(treeData, 'id', '1-2-1');
+    const node = findTreeByTreeData(treeData, 'id', '2');
+    // console.log(isChildNode(treeData, '1-1-1-1-2', 'id'));
+    console.log(isRootNode(treeData, node, 'id', false));
 
     // console.log(isLeafNode(treeData, node, 'id'));
 
-    // console.log(findCurrentNodeBrotherNode(treeData, '1-1-1-1', 'id'));
+    // console.log(findCurrentNodeBrotherNode(treeData, '1', 'id'));
 
 
 

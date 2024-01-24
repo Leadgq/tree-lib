@@ -64,5 +64,6 @@ export {
     redoTreeData,
     isLeafNode,
     findCurrentNodeBrotherNode,
-    treeFuzzySearch
+    treeFuzzySearch,
+    isRootNode
 } from "./lib/tree";
