@@ -19,7 +19,8 @@ export {
     initBroadcastChannel,
     uniqueArray,
     fuzzySearch,
-    Clipboard
+    Clipboard,
+    createOverload
 } from "./lib/tools"
 
 export {
@@ -63,5 +64,6 @@ export {
     redoTreeData,
     isLeafNode,
     findCurrentNodeBrotherNode,
-    treeFuzzySearch
+    treeFuzzySearch,
+    isRootNode
 } from "./lib/tree";
