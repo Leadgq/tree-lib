@@ -30,6 +30,7 @@ export {
     isAbleString,
     isAbleNumber,
     isHasChange,
+    isAsync,
     reviseNumber,
     stringToNumber,
     arrayLength,
@@ -43,7 +44,9 @@ export {
     getObjetKeys,
     getObjectEntries,
     objIsContainsKey,
-    typeofData
+    typeofData,
+    isObjectArray,
+    isBaseTypeArray
 } from "./lib/base"
 
 export {
