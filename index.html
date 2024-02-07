@@ -101,13 +101,12 @@
         children: []
       }
     ]
-    // const treeData =
-
-    const node = findTreeByTreeData(treeData, 'id', '1-2');
+  
+    const node = findTreeByTreeData(treeData, {s:"111"}, '1-2-1');
     // console.log(isChildNode(treeData, '1-1-1-1-2', 'id'));
-    console.log(isRootNode(treeData, node, 'id', true));
+    // console.log(isRootNode(treeData, {id:'1-2'}, 'id' ));
 
-    // console.log(isLeafNode(treeData, node, 'id'));
+    console.log(isLeafNode(treeData, node, 'id'));
 
     // console.log(findCurrentNodeBrotherNode(treeData, '1', 'id'));
 
