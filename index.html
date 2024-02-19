@@ -41,6 +41,9 @@
       treeFuzzySearch,
       Clipboard,
       createOverload,
+      breadthFirstSearch,
+      flattenTreeByPostOrder,
+      postOrderFirstSearch
     } from "/main.js"
 
     const treeData = [
@@ -101,9 +104,15 @@
         children: []
       }
     ]
-
-    const node = findTreeByTreeData(treeData, '1-2-1', { s: "111" });
-    console.log(node);
+    // breadthFirstSearch(treeData, (node) => {
+    //   console.log(node);
+    // })
+    // postOrderFirstSearch(treeData, (node) => {
+    //   console.log(node);
+    // })
+    // console.log(flattenTreeByPostOrder(treeData));
+    // const node = findTreeByTreeData(treeData, '1-2-1', { s: "111" });
+    // console.log(node);
     // console.log(isChildNode(treeData, '1-1-1-1-2', 'id'));
     // console.log(isRootNode(treeData, {id:'1-2'}, 'id' ));
 

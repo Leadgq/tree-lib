@@ -68,5 +68,7 @@ export {
     isLeafNode,
     findCurrentNodeBrotherNode,
     treeFuzzySearch,
-    isRootNode
+    isRootNode,
+    breadthFirstSearch,
+    postOrderFirstSearch
 } from "./lib/tree";
