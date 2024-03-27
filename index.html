@@ -264,39 +264,41 @@
     //   })
     // }, 1000)
 
-    // const data = [
-    //   {
-    //     name: 'gq',
-    //     age: 22,
-    //     id: 2
-    //   },
-    //   {
-    //     name: '李四',
-    //     age: 22,
-    //     id: 1
-    //   },
-    //   {
-    //     name: '老宋',
-    //     age: 3333333333,
-    //     id: 221
-    //   },
-    //   {
-    //     name: '李四',
-    //     age: 22,
-    //     id: 1
-    //   },
-    //   {
-    //     name: '王五',
-    //     age: 365,
-    //     id: 6
-    //   },
-    //   {
-    //     name: '王昭君',
-    //     age: 34,
-    //     id: 7
-    //   }
-    // ]
-    // console.log(uniqueArray(data, 'id'));
+    const data = [
+      {
+        name: 'gq',
+        age: 22,
+        id: 2
+      },
+      {
+        name: '李四',
+        age: 22,
+        id: 1
+      },
+      {
+        name: '王昭君',
+        age: 3333333333,
+        id: 7
+      },
+      {
+        name: '李四s',
+        age: 22,
+        id: 12
+      },
+      {
+        name: '王五',
+        age: 365,
+        id: 6
+      },
+      {
+        name: '王昭君',
+        age: 34,
+        id: 7
+      }
+    ]
+    console.log(uniqueArray(data, (cur,next)=>{
+      return cur.id === next.id
+    }));
     // console.log(fuzzySearch(data, '3', 'age'));
 
     // async function test() {
