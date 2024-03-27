@@ -41,7 +41,14 @@
       treeFuzzySearch,
       Clipboard,
       createOverload,
+      breadthFirstSearch,
+      flattenTreeByPostOrder,
+      postOrderFirstSearch,
+      genderRandom
     } from "/main.js"
+
+
+    console.log(genderRandom(1,5));
 
     const treeData = [
       {
@@ -101,11 +108,17 @@
         children: []
       }
     ]
-    // const treeData =
-
-    const node = findTreeByTreeData(treeData, 'id', '2');
+    // breadthFirstSearch(treeData, (node) => {
+    //   console.log(node);
+    // })
+    // postOrderFirstSearch(treeData, (node) => {
+    //   console.log(node);
+    // })
+    // console.log(flattenTreeByPostOrder(treeData));
+    // const node = findTreeByTreeData([], "id", '1-2-1');
+    // console.log(node);
     // console.log(isChildNode(treeData, '1-1-1-1-2', 'id'));
-    console.log(isRootNode(treeData, node, 'id', false));
+    // console.log(isRootNode(treeData, {id:'1-2'}, 'id' ));
 
     // console.log(isLeafNode(treeData, node, 'id'));
 
@@ -251,39 +264,41 @@
     //   })
     // }, 1000)
 
-    // const data = [
-    //   {
-    //     name: 'gq',
-    //     age: 22,
-    //     id: 2
-    //   },
-    //   {
-    //     name: '李四',
-    //     age: 22,
-    //     id: 1
-    //   },
-    //   {
-    //     name: '老宋',
-    //     age: 3333333333,
-    //     id: 221
-    //   },
-    //   {
-    //     name: '李四',
-    //     age: 22,
-    //     id: 1
-    //   },
-    //   {
-    //     name: '王五',
-    //     age: 365,
-    //     id: 6
-    //   },
-    //   {
-    //     name: '王昭君',
-    //     age: 34,
-    //     id: 7
-    //   }
-    // ]
-    // console.log(uniqueArray(data, 'id'));
+    const data = [
+      {
+        name: 'gq',
+        age: 22,
+        id: 2
+      },
+      {
+        name: '李四',
+        age: 22,
+        id: 1
+      },
+      {
+        name: '王昭君',
+        age: 3333333333,
+        id: 7
+      },
+      {
+        name: '李四s',
+        age: 22,
+        id: 12
+      },
+      {
+        name: '王五',
+        age: 365,
+        id: 6
+      },
+      {
+        name: '王昭君',
+        age: 34,
+        id: 7
+      }
+    ]
+    console.log(uniqueArray(data, (cur,next)=>{
+      return cur.id === next.id
+    }));
     // console.log(fuzzySearch(data, '3', 'age'));
 
     // async function test() {

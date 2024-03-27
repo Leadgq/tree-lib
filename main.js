@@ -20,7 +20,8 @@ export {
     uniqueArray,
     fuzzySearch,
     Clipboard,
-    createOverload
+    createOverload,
+    genderRandom
 } from "./lib/tools"
 
 export {
@@ -30,6 +31,7 @@ export {
     isAbleString,
     isAbleNumber,
     isHasChange,
+    isAsync,
     reviseNumber,
     stringToNumber,
     arrayLength,
@@ -43,7 +45,9 @@ export {
     getObjetKeys,
     getObjectEntries,
     objIsContainsKey,
-    typeofData
+    typeofData,
+    isObjectArray,
+    isBaseTypeArray
 } from "./lib/base"
 
 export {
@@ -65,5 +69,7 @@ export {
     isLeafNode,
     findCurrentNodeBrotherNode,
     treeFuzzySearch,
-    isRootNode
+    isRootNode,
+    breadthFirstSearch,
+    postOrderFirstSearch
 } from "./lib/tree";
