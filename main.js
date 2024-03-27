@@ -20,7 +20,8 @@ export {
     uniqueArray,
     fuzzySearch,
     Clipboard,
-    createOverload
+    createOverload,
+    genderRandom
 } from "./lib/tools"
 
 export {
