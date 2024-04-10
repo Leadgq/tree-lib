@@ -44,11 +44,12 @@
       breadthFirstSearch,
       flattenTreeByPostOrder,
       postOrderFirstSearch,
-      genderRandom
+      genderRandom,
+      pickObjectArray
     } from "/main.js"
 
 
-    console.log(genderRandom(1,5));
+    console.log(genderRandom(1, 5));
 
     const treeData = [
       {
@@ -296,7 +297,7 @@
         id: 7
       }
     ]
-    console.log(uniqueArray(data, (cur,next)=>{
+    console.log(uniqueArray(data, (cur, next) => {
       return cur.id === next.id
     }));
     // console.log(fuzzySearch(data, '3', 'age'));
@@ -324,6 +325,87 @@
     // testFn.addImpl('string', 'string', strFn)
     // testFn.addImpl('string', 'string', 'string', strFn2)
     // testFn('1', '2', '3')
+    const testList = [
+      {
+        name: 'gq',
+        address: [
+          {
+            children: [
+              {
+                age: '22',
+
+              },
+              {
+                age: '33',
+                keys: [
+                  '123', '2312',
+                  {
+                    key: '12312'
+                  }
+                ]
+              },
+              {
+                age: '88',
+                keys: [
+
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: 'gq',
+        address: [
+          {
+            children: [
+              {
+                age: '这是测试',
+                keys: [
+                  {
+                    key: '3sdasdasdas12'
+                  }
+                ]
+              },
+              {
+                age: '测手机',
+                keys: [
+                  {
+                    key: '312312312'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: 'gq',
+        address: [
+          {
+            children: [
+              {
+                age: '这是测试sss',
+                keys: [
+                  {
+                    key: '1232131'
+                  }
+                ]
+              },
+              {
+                age: 's测手机',
+                keys: [
+                  {
+                    key: '333'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+    console.log(pickObjectArray(testList, 'address.children'));
   </script>
 </body>
 
