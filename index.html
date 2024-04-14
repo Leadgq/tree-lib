@@ -46,7 +46,8 @@
       postOrderFirstSearch,
       genderRandom,
       // pickObjectArray,
-      pickObject
+      pickObject,
+      omitObject,
     } from "/main.js"
 
 
@@ -303,16 +304,16 @@
     // }));
     // console.log(fuzzySearch(data, '3', 'age'));
 
-    async function test() {
-      const test = document.querySelector('.test');
-      const value = test.innerText;
-      const ClipboardInstance = new Clipboard();
-      const res = await ClipboardInstance.copyTextByClipboard(value);
-      const text = await ClipboardInstance.readTextByClipboard();
-      console.log(text);
-    }
-    const copyButton = document.getElementById('copy');
-    copyButton.addEventListener('click', test)
+    // async function test() {
+    //   const test = document.querySelector('.test');
+    //   const value = test.innerText;
+    //   const ClipboardInstance = new Clipboard();
+    //   const res = await ClipboardInstance.copyTextByClipboard(value);
+    //   const text = await ClipboardInstance.readTextByClipboard();
+    //   console.log(text);
+    // }
+    // const copyButton = document.getElementById('copy');
+    // copyButton.addEventListener('click', test)
 
     // const testFn = createOverload();
     // const strFn = (...args) => {
@@ -327,11 +328,18 @@
     // testFn.addImpl('string', 'string', 'string', strFn2)
     // testFn('1', '2', '3')
 
-    // let obj = {
-    //   a: 1,
-    //   b: 2,
-    //   c: 3
-    // }
+    let obj = {
+      a: 1,
+      b: 2,
+      c: 3,
+      children: [1, 2, 3, 4, 5]
+    }
+    // console.log(omitObject(obj,['b','c','d']));
+
+
+    console.log(omitObject(obj, (k, v) => {
+      return k === 'a' || v === 2 || Array.isArray(v)
+    }));
     // // console.log(pickObject(obj, ['a', 'b']));
     // // pickObject(obj, ['a', 'b'])
     // const r = pickObject(obj, (k, v) => {
