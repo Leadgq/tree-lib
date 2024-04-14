@@ -50,7 +50,7 @@
     } from "/main.js"
 
 
-    console.log(genderRandom(1, 5));
+    // console.log(genderRandom(1, 5));
 
     const treeData = [
       {
@@ -298,21 +298,21 @@
         id: 7
       }
     ]
-    console.log(uniqueArray(data, (cur, next) => {
-      return cur.id === next.id
-    }));
+    // console.log(uniqueArray(data, (cur, next) => {
+    //   return cur.id === next.id
+    // }));
     // console.log(fuzzySearch(data, '3', 'age'));
 
-    // async function test() {
-    //   const test = document.querySelector('.test');
-    //   const value = test.innerText;
-    //   const ClipboardInstance = new Clipboard();
-    //   const res = await ClipboardInstance.copyTextByClipboard(value);
-    //   const text = await ClipboardInstance.readTextByClipboard();
-    //   console.log(text);
-    // }
-    // const copyButton = document.getElementById('copy');
-    // copyButton.addEventListener('click', test)
+    async function test() {
+      const test = document.querySelector('.test');
+      const value = test.innerText;
+      const ClipboardInstance = new Clipboard();
+      const res = await ClipboardInstance.copyTextByClipboard(value);
+      const text = await ClipboardInstance.readTextByClipboard();
+      console.log(text);
+    }
+    const copyButton = document.getElementById('copy');
+    copyButton.addEventListener('click', test)
 
     // const testFn = createOverload();
     // const strFn = (...args) => {
@@ -327,17 +327,17 @@
     // testFn.addImpl('string', 'string', 'string', strFn2)
     // testFn('1', '2', '3')
 
-    let obj = {
-      a: 1,
-      b: 2,
-      c: 3
-    }
-    // console.log(pickObject(obj, ['a', 'b']));
-    // pickObject(obj, ['a', 'b'])
-    const r = pickObject(obj, (k, v) => {
-      return v === 3
-    })
-    console.log(r);
+    // let obj = {
+    //   a: 1,
+    //   b: 2,
+    //   c: 3
+    // }
+    // // console.log(pickObject(obj, ['a', 'b']));
+    // // pickObject(obj, ['a', 'b'])
+    // const r = pickObject(obj, (k, v) => {
+    //   return v === 3
+    // })
+    // console.log(r);
   </script>
 </body>
 
