@@ -48,6 +48,7 @@
       // pickObjectArray,
       pickObject,
       omitObject,
+      isDeepEqual,
     } from "/main.js"
 
 
@@ -346,6 +347,50 @@
     //   return v === 3
     // })
     // console.log(r);
+
+
+
+    let obj2 = {
+      a: 0,
+      list: [1, 2, 3, 4],
+      c: {
+        b: [{ s: 2, o: '22',l:'33' }],
+        dataSource: [
+          {
+            fansType: 1,
+            fansName: '大厂'
+          }
+        ]
+      }
+    }
+
+
+    let obj3 = {
+      a: 0,
+      list: [1, 2, 3, 4],
+      c: {
+        b: [{ s: 2, o: '22' }],
+        dataSource: [
+          {
+            fansType: 1,
+            fansName: '大厂'
+          }
+        ]
+      }
+    }
+
+    console.log(isDeepEqual(obj2, obj3));
+
+
+
+
+
+
+
+
+
+
+
   </script>
 </body>
 
