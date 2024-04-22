@@ -49,6 +49,7 @@
       pickObject,
       omitObject,
       isDeepEqual,
+      objectMap
     } from "/main.js"
 
 
@@ -335,18 +336,27 @@
       c: 3,
       children: [1, 2, 3, 4, 5]
     }
+
+    // const r = objectMap(obj, (k, v) => {
+    //   if (typeof v === 'number') {
+    //     v = v * 2
+    //   }
+    //   return [k, v]
+    // })
+    // console.log(r);
+
     // console.log(omitObject(obj,['b','c','d']));
 
 
     console.log(omitObject(obj, (k, v) => {
       return k === 'a' || v === 2 || Array.isArray(v)
     }));
-    // // console.log(pickObject(obj, ['a', 'b']));
-    // // pickObject(obj, ['a', 'b'])
-    // const r = pickObject(obj, (k, v) => {
-    //   return v === 3
-    // })
-    // console.log(r);
+    // console.log(pickObject(obj, ['a', 'b']));
+    // pickObject(obj, ['a', 'b'])
+    const r = pickObject(obj, (k, v) => {
+      return v === 3
+    })
+    console.log(r);
 
 
 
@@ -354,7 +364,7 @@
       a: 0,
       list: [1, 2, 3, 4],
       c: {
-        b: [{ s: 2, o: '22',l:'33' }],
+        b: [{ s: 2, o: '22', l: '33' }],
         dataSource: [
           {
             fansType: 1,
