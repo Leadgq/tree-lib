@@ -49,7 +49,8 @@
       pickObject,
       omitObject,
       isDeepEqual,
-      objectMap
+      objectMap,
+      deepClone
     } from "/main.js"
 
 
@@ -371,6 +372,9 @@
             fansName: '大厂'
           }
         ]
+      },
+      say: function () {
+        console.log(this.a);
       }
     }
 
@@ -389,9 +393,11 @@
       }
     }
 
-    console.log(isDeepEqual(obj2, obj3));
+    // console.log(isDeepEqual(obj2, obj3));
 
-
+    const res = deepClone(obj2);
+    // console.log(res);
+    res.say();
 
 
 
