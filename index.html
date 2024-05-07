@@ -121,14 +121,14 @@
     //   console.log(node);
     // })
     // console.log(flattenTreeByPostOrder(treeData));
-    // const node = findTreeByTreeData([], "id", '1-2-1');
+    const node = findTreeByTreeData(treeData, "id", '1-2-1');
     // console.log(node);
-    // console.log(isChildNode(treeData, '1-1-1-1-2', 'id'));
-    // console.log(isRootNode(treeData, {id:'1-2'}, 'id' ));
+    console.log(isChildNode(treeData, '1-1-1-1-2', 'id'));
+    console.log(isRootNode(treeData, {id:'1-2'}, 'id' ));
 
-    // console.log(isLeafNode(treeData, node, 'id'));
+    console.log(isLeafNode(treeData, node, 'id'));
 
-    // console.log(findCurrentNodeBrotherNode(treeData, '1', 'id'));
+    console.log(findCurrentNodeBrotherNode(treeData, '1', 'id'));
 
 
 
@@ -383,7 +383,7 @@
       a: 0,
       list: [1, 2, 3, 4],
       c: {
-        b: [{ s: 2,  l:'3',o: '22' }],
+        b: [{ s: 2, l: '3', o: '22' }],
         dataSource: [
           {
             fansType: 1,
@@ -394,10 +394,6 @@
     }
 
     // console.log(isDeepEqual(obj2, obj3));
-
-    const res = deepClone(obj2);
-    // console.log(res);
-    res.say();
 
 
 
