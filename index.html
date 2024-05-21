@@ -50,11 +50,14 @@
       omitObject,
       isDeepEqual,
       objectMap,
-      deepClone
+      deepClone,
+      padStrPrevOrSuffix
     } from "/main.js"
 
 
-    // console.log(genderRandom(1, 5));
+   const res =   padStrPrevOrSuffix({ str:'123', prevOrSuffix: '0', len: 1, direction: 'suffix' });
+    
+    console.log(res);
 
     const treeData = [
       {
