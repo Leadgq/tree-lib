@@ -304,16 +304,16 @@
     // }));
     // console.log(fuzzySearch(data, '3', 'age'));
 
-    // async function test() {
-    //   const test = document.querySelector('.test');
-    //   const value = test.innerText;
-    //   const ClipboardInstance = new Clipboard();
-    //   const res = await ClipboardInstance.copyTextByClipboard(value);
-    //   const text = await ClipboardInstance.readTextByClipboard();
-    //   console.log(text);
-    // }
-    // const copyButton = document.getElementById('copy');
-    // copyButton.addEventListener('click', test)
+    async function test() {
+      const test = document.querySelector('.test');
+      const value = test.innerText;
+      const ClipboardInstance = new Clipboard();
+      const res = await ClipboardInstance.copyTextByClipboard(value);
+      const text = await ClipboardInstance.readTextByClipboard();
+      console.log(text);
+    }
+    const copyButton = document.getElementById('copy');
+    copyButton.addEventListener('click', test)
 
     // const testFn = createOverload();
     // const strFn = (...args) => {
