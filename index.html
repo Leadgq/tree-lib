@@ -2,33 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Vite App</title>
+    <meta charset="UTF-8" />
+    <title>Test onlyLastHttpValue</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.5.3/vue.js"></script>
 </head>
 
 <body>
-<div id="app">
-</div>
-<!-- <script type="module" src="/main.js"></script> -->
-<script type="module">
-    import {
+    <div id="app">
+        <h3>当前值: {{obj.age}}</h3>
+        <div>请求历史:</div>
+        <ul>
+            <li v-for="(item, index) in history" :key="index">
+                {{item}}
+            </li>
+        </ul>
+        <button @click="addAge(10)">延迟10秒</button>
+        <button @click="addAge(3)">延迟3秒</button>
+        <button @click="addAge(1)">延迟1秒</button>
+        <button @click="addAge(2)">延迟2秒</button>
+    </div>
 
-        jointUrl,
-    } from "/main.js"
-
-
-    const r = jointUrl('https://www.baidu.com', {
-        name: 'saber2pr',
-        label: undefined,
-        ccc: [1,2,3],
-        gpgp: ['123','456'].join(','),
-    })
-    console.log(r);
-
-
-</script>
+    <script type="module">
+        import { onlyLastHttpValue } from "/main.js"
+        
+        new Vue({
+            el: '#app',
+            data: {
+                obj: {
+                    age: 0
+                },
+                history: []
+            },
+            methods: {
+                async addAge(number) {
+                    console.log(`开始请求: ${number}秒`)
+                    this.history.push(`开始请求: ${number}秒`)
+                    
+                    const r = await this.getUserInfoWrap(number)
+                    if (r !== null) {
+                        this.obj.age = r
+                        this.history.push(`设置结果: ${r}`)
+                    } else {
+                        this.history.push(`丢弃结果: ${number}`)
+                    }
+                },
+                async getUserInfo(number) {
+                    return new Promise((resolve) => {
+                        const time = number * 1000 // 固定延迟，更容易测试
+                        setTimeout(() => {
+                            resolve(number)
+                        }, time)
+                    })
+                }
+            },
+            created() {
+                this.getUserInfoWrap = onlyLastHttpValue(this.getUserInfo)
+            }
+        })
+    </script>
 </body>
 
 </html>
